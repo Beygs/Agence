@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  @include themed() {
+    background-color: t(bg);
+    color: t(txt);
+  }
+
+  div {
+    display: flex;
+  }
+
+}

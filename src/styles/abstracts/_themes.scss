@@ -1,0 +1,10 @@
+$themes: (
+  light: (
+    bg: $bg--light,
+    txt: $bg--dark,
+  ),
+  dark: (
+    bg: $bg--dark,
+    txt: $bg--light,
+  ),
+);

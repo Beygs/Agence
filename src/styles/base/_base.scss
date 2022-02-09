@@ -1,0 +1,6 @@
+main {
+  @include themed() {
+    background-color: t(bg);
+    color: t(txt);
+  }
+}
