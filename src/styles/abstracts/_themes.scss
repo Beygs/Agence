@@ -2,9 +2,13 @@ $themes: (
   light: (
     bg: $bg--light,
     txt: $text--light,
+    btn-bg: $btn-bg--light,
+    menu-txt: $orange,
   ),
   dark: (
     bg: $bg--dark,
     txt: $text--dark,
+    btn-bg: $btn-bg--dark,
+    menu-txt: $dark,
   ),
 );

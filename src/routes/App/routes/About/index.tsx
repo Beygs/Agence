@@ -1,5 +1,5 @@
 const About = () => (
-  <main className="About">
+  <div className="About">
     <h2>
       L&apos;Agence est une Agence (oui oui) de communication digitale à Paris
       ayant pour mission de vous accompagner sur vos projets digitaux.
@@ -13,7 +13,7 @@ const About = () => (
       ayant accompagné &quot;PLATON&quot;, &quot;TCar&quot;,
       &quot;Solane&quot; ou encore &quot;Sedal&quot; vers le sommet.
     </p>
-  </main>
+  </div>
 );
 
 export default About;

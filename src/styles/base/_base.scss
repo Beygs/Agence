@@ -1,5 +1,6 @@
 #root,
-.App {
+.App,
+main {
   height: 100%;
 }
 
@@ -42,7 +43,7 @@
   }
 }
 
-main {
+main>div {
   width: 90%;
   max-width: 1300px;
   height: 100%;

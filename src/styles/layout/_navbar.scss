@@ -8,6 +8,10 @@
     display: flex;
   }
 
+  nav {
+    color: $dark;
+  }
+
   button {
     outline: none;
     border: none;
@@ -20,6 +24,12 @@
     height: 50px;
     border-radius: 50%;
     background: transparent;
+
+    svg path {
+      @include themed() {
+        stroke: t(bg);
+      }
+    }
   }
 
   .nav-bg {
@@ -28,7 +38,9 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    background: #fff;
+    @include themed() {
+      background-color: t(btn-bg);
+    }
   }
 
   .menu {
@@ -43,8 +55,13 @@
 
     li {
       font-size: clamp(2rem, 8rem, 10vw);
-      list-style: none;
       line-height: 2em;
+
+      a {
+        @include themed() {
+          color: t(menu-txt);
+        }
+      }
     }
   }
 }

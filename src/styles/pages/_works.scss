@@ -1,0 +1,16 @@
+.Works {
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  li a {
+    margin: 1em;
+    transition: all 0.1s ease;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}

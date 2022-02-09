@@ -38,5 +38,6 @@ const NavItem = ({ navItem, toggle }: NavItemProps) => {
       </NavLink>
     </motion.li>
   );
-}
+};
+
 export default NavItem;

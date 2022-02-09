@@ -6,7 +6,7 @@ import "styles/main.scss";
 
 render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Agence">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
