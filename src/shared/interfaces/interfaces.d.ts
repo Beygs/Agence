@@ -12,6 +12,7 @@ export interface NavbarProps {
 
 export interface NavItemProps {
   navItem: RouteConstant;
+  toggle: Cycle;
 }
 
 export interface MapRouteProps {
@@ -19,4 +20,8 @@ export interface MapRouteProps {
     path: string;
     component: () => JSX.Element;
   }
+}
+
+export interface ToggleProps {
+  toggle: Cycle;
 }

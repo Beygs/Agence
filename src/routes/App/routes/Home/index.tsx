@@ -1,15 +1,15 @@
 const Home = () => (
-  <div className="Home">
+  <main className="Home">
     <h2>Confiez vos rêves à des experts du Web</h2>
     <p>
-      Grâce à notre savoir-faire, notre expérience et notre écoute,&nbsp;
-      nous accompagnons nos clients dans la création de site internet:&nbsp;
+      Grâce à notre savoir-faire, notre expérience et notre écoute,
+      nous accompagnons nos clients dans la création de site internet :
       étude, UX, conception, design, développement, SEO.
       <br />
-      Notre agence web est capable de répondre à tous vos besoins&nbsp;
+      Notre agence web est capable de répondre à tous vos besoins
       et d&apos;élaborer une véritable stratégie digitale.
     </p>
-  </div>
+  </main>
 );
 
 export default Home;

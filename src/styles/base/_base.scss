@@ -1,6 +1,80 @@
-main {
+#root,
+.App {
+  height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
   @include themed() {
-    background-color: t(bg);
+    background: t(bg);
+  }
+
+  .noise {
+    position: fixed;
+    top: -50%;
+    bottom: -50%;
+    left: -50%;
+    right: -50%;
+    height: 200%;
+    width: 200%;
+    z-index: -1;
+    background: transparent url("http://assets.iceable.com/img/noise-transparent.png");
+    opacity: 0.9;
+    animation: bg-animation 1s infinite;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  align-items: center;
+  
+  @include themed() {
     color: t(txt);
   }
+}
+
+main {
+  width: 90%;
+  max-width: 1300px;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 2em;
+    font-size: 2.5rem;
+  }
+}
+
+a {
+  @include themed() {
+    color: t(txt);
+  }
+}
+
+@keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
 }

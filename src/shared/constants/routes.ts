@@ -8,7 +8,7 @@ export default Object.freeze({
     route: "about",
   },
   WORKS: {
-    name: "Travaux",
+    name: "Projets",
     route: "works",
     subroutes: {
       STUDY_CASE: {

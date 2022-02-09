@@ -1,2 +1,15 @@
-$bg--light: #e3e3e3;
-$bg--dark: #333;
+$orange: hsl(14, 84%, 48%);
+$yellow: hsl(45, 96%, 50%);
+$green: hsl(143, 43%, 30%);
+$light: hsl(40, 6%, 96%);
+$dark: hsl(0, 0%, 11%);
+
+// Light theme colors
+
+$bg--light: $light;
+$text--light: $dark;
+
+// Dark theme colors
+
+$bg--dark: $dark;
+$text--dark: $light;

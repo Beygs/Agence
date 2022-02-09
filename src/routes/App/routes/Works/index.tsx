@@ -2,14 +2,22 @@ import { NavLink, Outlet } from "react-router-dom";
 import data from "./data";
 
 const Works = () => (
-  <div className="Works">
-    <h1>Works</h1>
+  <main className="Works">
+    <h2>
+      <NavLink to="/works">
+        Works
+      </NavLink>
+    </h2>
     <ul className="workItems">
       {data.map((d) => (
-        <li className="workItem">
+        <li className="workItem" key={d.path}>
           <NavLink
             to={d.path}
-            key={d.path}
+            style={({ isActive }) => (
+              {
+                color: isActive ? "hsl(14, 84%, 48%)" : "",
+              }
+            )}
           >
             {d.name}
           </NavLink>
@@ -17,7 +25,7 @@ const Works = () => (
       ))}
     </ul>
     <Outlet />
-  </div>
+  </main>
 );
 
 export default Works;
