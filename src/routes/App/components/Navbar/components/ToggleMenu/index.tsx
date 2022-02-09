@@ -1,8 +1,8 @@
 import { ToggleProps } from "shared/interfaces/interfaces";
 import Path from "./components/Path";
 
-const Toggle = ({ toggle }: ToggleProps) => (
-  <button type="button" onClick={toggle}>
+const ToggleMenu = ({ toggle }: ToggleProps) => (
+  <button type="button" name="menu-toggle" onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
@@ -28,4 +28,4 @@ const Toggle = ({ toggle }: ToggleProps) => (
   </button>
 );
 
-export default Toggle;
+export default ToggleMenu;

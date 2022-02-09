@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { motion, useCycle } from "framer-motion";
 import NavItems from "./components/NavItems";
-import Toggle from "./components/Toggle";
+import ToggleMenu from "./components/ToggleMenu";
+import ToggleTheme from "./ToggleTheme";
 
 const sidebar = {
   open: {
@@ -32,6 +33,7 @@ const Navbar = () => {
         <NavLink to="/">
           <h1>L&apos;agence</h1>
         </NavLink>
+        <ToggleTheme />
       </header>
       <motion.nav
         initial={false}
@@ -39,7 +41,7 @@ const Navbar = () => {
       >
         <motion.div className="nav-bg" variants={sidebar} />
         <NavItems toggle={() => toggleOpen()} />
-        <Toggle toggle={() => toggleOpen()} />
+        <ToggleMenu toggle={() => toggleOpen()} />
       </motion.nav>
     </div>
   );

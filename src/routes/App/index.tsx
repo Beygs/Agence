@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ThemeContext from "shared/contexts/ThemeContext";
 import Navbar from "routes/App/components/Navbar";
 import { useRoutes, useLocation } from "react-router-dom";
@@ -8,12 +8,25 @@ import { motion, AnimatePresence } from "framer-motion";
 const App = () => {
   const routing = useRoutes(AppRoutes);
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const colorTheme = localStorage.getItem("colorTheme");
+
+    if (!colorTheme) {
+      localStorage.setItem("colorTheme", "");
+      return false;
+    }
+
+    return JSON.parse(colorTheme);
+  });
 
   const themeCtxValue = useMemo(() => ({
     darkMode,
     toggleTheme: () => setDarkMode(!darkMode),
-  }), []);
+  }), [darkMode]);
+
+  useEffect(() => {
+    localStorage.setItem("colorTheme", JSON.stringify(darkMode));
+  }, [darkMode]);
 
   const location = useLocation();
 
