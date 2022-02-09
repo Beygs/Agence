@@ -9,6 +9,14 @@
     align-items: center;
     justify-content: space-between;
     padding-right: 60px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 380px) {
+      &>a {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   nav {
@@ -53,11 +61,12 @@
     right: 0;
     left: 0;
     display: flex;
-    align-items: center;
-    padding: 5rem;
+    padding: 5%;
+    flex-direction: column;
+    justify-content: center;
 
     li {
-      font-size: clamp(2rem, 8rem, 10vw);
+      font-size: clamp(1rem, 5rem, 10vw);
       line-height: 2em;
 
       a {

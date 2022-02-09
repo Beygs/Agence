@@ -8,7 +8,7 @@ const NavItems = ({ toggle }: ToggleProps) => {
 
   const variants = {
     open: {
-      display: "block",
+      display: "flex",
       transition: {
         staggerChildren: 0.07,
         delayChildren: 0.2,
