@@ -4,16 +4,19 @@ import Navbar from "routes/App/components/Navbar";
 import { useRoutes, useLocation } from "react-router-dom";
 import AppRoutes from "routes/App/routes";
 import { motion, AnimatePresence } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const App = () => {
   const routing = useRoutes(AppRoutes);
+
+  const preferedColorScheme = useMediaQuery({ query: "(prefers-color-scheme: dark)" });
 
   const [darkMode, setDarkMode] = useState(() => {
     const colorTheme = localStorage.getItem("colorTheme");
 
     if (!colorTheme) {
       localStorage.setItem("colorTheme", "");
-      return false;
+      return preferedColorScheme;
     }
 
     return JSON.parse(colorTheme);
