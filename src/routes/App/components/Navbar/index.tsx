@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { motion, useCycle } from "framer-motion";
 import NavItems from "./components/NavItems";
 import ToggleMenu from "./components/ToggleMenu";
-import ToggleTheme from "./ToggleTheme";
+import ToggleTheme from "./components/ToggleTheme";
 
 const sidebar = {
   open: {

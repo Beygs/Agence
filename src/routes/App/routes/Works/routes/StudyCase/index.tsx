@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 import { getWork } from "../../data";
 
 const StudyCase = () => {
@@ -7,12 +8,26 @@ const StudyCase = () => {
   if (params.studyCase) data = getWork(params.studyCase);
 
   return (
-    <div className="StudyCase">
+    <motion.div
+      className="StudyCase"
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 30,
+        damping: 2,
+      }}
+      key={data?.name}
+    >
       <h3>{data?.title}</h3>
       <p>
         {data?.content}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

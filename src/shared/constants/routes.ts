@@ -12,7 +12,7 @@ export default Object.freeze({
     route: "works",
     subroutes: {
       STUDY_CASE: {
-        name: "study_case",
+        name: "Etude de cas",
         route: ":studyCase",
       },
     },
