@@ -12,7 +12,14 @@ const ToggleTheme = () => {
   };
 
   return (
-    <div className="ToggleTheme" data-ison={theme?.darkMode} role="button" tabIndex={0} onClick={theme?.toggleTheme}>
+    <div
+      className="ToggleTheme"
+      data-ison={theme?.darkMode}
+      role="button"
+      aria-label="Toggle color-theme"
+      tabIndex={0}
+      onClick={theme?.toggleTheme}
+    >
       <motion.div className="handle" layout transition={spring} />
     </div>
   );
