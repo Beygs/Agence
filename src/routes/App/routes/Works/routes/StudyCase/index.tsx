@@ -17,9 +17,9 @@ const StudyCase = () => {
         opacity: 1,
       }}
       transition={{
-        type: "spring",
-        stiffness: 30,
-        damping: 2,
+        type: "tween",
+        duration: 0.3,
+        ease: "linear",
       }}
       key={data?.name}
     >
